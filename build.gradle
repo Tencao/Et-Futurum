@@ -26,6 +26,22 @@ minecraft {
     runDir = "eclipse/assets"
 }
 
+repositories {
+    maven { //NEI Repo
+        name 'CB Repo'
+        url "http://chickenbones.net/maven/"
+    }
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version:'4.11'
+
+    compile "codechicken:CodeChickenCore:1.7.10-1.0.4.29:dev"
+    compile "codechicken:CodeChickenLib:1.7.10-1.1.1.110:dev"
+    compile "codechicken:NotEnoughItems:1.7.10-1.0.4.83:dev"
+
+}
+
 processResources {
      from(sourceSets.main.resources.srcDirs) {
           include 'mcmod.info'
